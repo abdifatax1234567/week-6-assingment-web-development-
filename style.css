@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263238;
+    line-height: 1.6;
+}
+
+header {
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+h2 {
+    color: #123c69;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #eaf2fb;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 21px;
+    font-weight: bold;
+    color: #123c69;
+    overflow-wrap: anywhere;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+input, select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    background: #167d5a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #105c42;
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 7px;
+    background: #e3f5e9;
+    color: #176b3a;
+    font-weight: bold;
+}
+
+.feedback.warning {
+    background: #fff1d6;
+    color: #875600;
+}
+
+.feedback.danger {
+    background: #fde5e5;
+    color: #a52222;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #f4f7fb;
+    border-radius: 8px;
+}
+
+.expense-details {
+    overflow-wrap: anywhere;
+}
+
+.expense-details small {
+    color: #64748b;
+}
+
+.delete-btn {
+    background: #d93636;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #a82020;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #123c69;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    .expense-item {
+        align-items: flex-start;
+    }
+}
